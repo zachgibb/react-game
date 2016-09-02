@@ -1,0 +1,33 @@
+{
+  "name": "react-game",
+  "description": "A simple webgame built in React!",
+  "author": "Zachary Gibb",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zachgibb/react-game.git"
+  },
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/zachgibb/react-game/issues"
+  },
+  "homepage": "https://github.com/zachgibb/react-game#readme",
+  "devDependencies": {
+    "react-scripts": "0.3.1"
+  },
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/react-scripts/config/eslint.js"
+  }
+}
