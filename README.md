@@ -1,3 +1,18 @@
+This is going to be a 1942-style top down shooter game, built in react.
+
+## Ideas for the game
+* Render the music as react components
+  * maybe we could have enemies add their own layers to the soundtrack?
+* Components!
+* Functional Programming!
+* Animation!
+
+<br>
+<br>
+---
+<br>
+<br>
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.  
