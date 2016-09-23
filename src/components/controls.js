@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import {
   pressUp,
@@ -40,6 +40,7 @@ class Controls extends Component {
       case 40:
         pressDown();
         break;
+      default:
     }
   }
 
@@ -59,6 +60,7 @@ class Controls extends Component {
       case 40:
         releaseDown();
         break;
+      default:
     }
   }
 
