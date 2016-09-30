@@ -6,7 +6,10 @@ import Player from './player';
 class Game extends Component {
   constructor() {
     super();
-    this.state = { position: { x: 0, y: 0 } };
+    this.state = {
+      position: { x: 0, y: 0 },
+      time: { delta: 0, last: new Date().getTime() }
+    };
     this._gameLoop = this._gameLoop.bind(this);
   }
 
@@ -16,14 +19,29 @@ class Game extends Component {
 
   _gameLoop() {
     const { xDirection, yDirection } = this.props;
-    const { position } = this.state;
+    const { position, time } = this.state;
+    const last = time.last;
 
-    this.setState({
-      position: {
-        x: (position.x + xDirection),
-        y: (position.y + yDirection)
-      }
-    });
+    const currentTime = new Date().getTime();
+
+    const timestep = 1/60 * 1000;
+
+    var delta = time.delta + (currentTime - last);
+
+    while(delta > timestep) {
+      delta -= timestep;
+
+      this.setState({
+        position: {
+          x: (position.x + xDirection),
+          y: (position.y + yDirection)
+        },
+        time: {
+          delta: delta,
+          last: currentTime
+        }
+      });
+    }
 
     window.requestAnimationFrame(this._gameLoop);
   }
