@@ -8,7 +8,7 @@ class Game extends Component {
     super();
     this.state = {
       position: { x: 0, y: 0 },
-      time: { delta: 0, last: new Date().getTime() }
+      time: { delta: 0, last: performance.now() }
     };
     this._gameLoop = this._gameLoop.bind(this);
   }
@@ -22,7 +22,7 @@ class Game extends Component {
     const { position, time } = this.state;
     const last = time.last;
 
-    const currentTime = new Date().getTime();
+    const currentTime = performance.now();
 
     const timestep = 1/60 * 1000;
 
